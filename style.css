@@ -120,6 +120,7 @@ li {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
   transition: background-color 250ms ease-in-out, color 200ms ease-in-out;
+  position: relative;
 }
 
 .movie-card:hover {
@@ -136,28 +137,45 @@ li {
   color: #3da5f5;
 }
 
-/* .movie-card:last-child {
-  margin-bottom: 0;
-} */
+.movie-card:hover .ic-star {
+  color: #fcf6bd;
+}
 
 .movie-card img {
   display: block;
   width: 100%;
   /* width: auto; */
   /* height: 500px; */
-  margin: 0 auto 13px;
+  /* margin: 0 auto 13px; */
   /* 이미지 가운데 정렬 */
   border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 300ms ease-in-out;
+}
+
+.movie-card img:hover {
+  transform: scale(1.01);
 }
 
 .movie-card h1 {
   margin-bottom: 7px;
+  padding: 0 5px;
 }
 
-/* .movie-card strong {
+.movie-card p {
+  margin-bottom: 25px;
+  padding: 0 5px;
+}
+
+.movie-card strong {
   position: absolute;
-  bottom: 0;
-} */
+  bottom: 10px;
+  padding: 0 5px;
+}
+
+.ic-star {
+  color: #ffbe0b;
+}
 
 @media screen and (min-width: 768px) {
   .movie-container {
