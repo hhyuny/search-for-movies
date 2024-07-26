@@ -1,6 +1,4 @@
 // 검색 기능 - 검색어를 포함하는 영화로 리팩토링
-// 각 영화 카드에 id 속성을 부여해서 각 영화의 id(API로 받은) 값을 넣어줬음.
-
 form.addEventListener("submit", (e) => {
   e.preventDefault(); // 새로고침 방지
 
