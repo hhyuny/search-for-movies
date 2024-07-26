@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "search";
-  src: url("./assets/fonts/search.eot");
-  src: url("./assets/fonts/search.eot#iefix") format("embedded-opentype"), url("./assets/fonts/search.ttf") format("truetype"), url("./assets/fonts/search.woff") format("woff"), url("./assets/fonts/search.svg#search") format("svg");
+  font-family: "movies";
+  src: url("./assets/fonts/movies.eot");
+  src: url("./assets/fonts/movies.eot#iefix") format("embedded-opentype"), url("./assets/fonts/movies.ttf") format("truetype"), url("./assets/fonts/movies.woff") format("woff"), url("./assets/fonts/movies.svg#movies") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -9,7 +9,7 @@
 
 i {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "search" !important;
+  font-family: "movies" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -23,5 +23,8 @@ i {
 }
 
 .ic-search:before {
-  content: "\e900";
+  content: "\e90d";
+}
+.ic-star:before {
+  content: "\e90e";
 }
