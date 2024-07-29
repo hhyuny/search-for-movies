@@ -32,7 +32,6 @@ function createMovieCard(movie) {
   const descButton = card.querySelector(".desc-button");
   const descContent = card.querySelector(".desc-content");
   const closeButton = card.querySelector(".close-button");
-  console.log(closeButton);
   descButton.addEventListener("click", () => {
     descContent.classList.toggle("is-active");
   });
