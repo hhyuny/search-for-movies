@@ -31,6 +31,9 @@ li {
   margin-left: 0;
 }
 
+.hidden {
+}
+
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 960px !important;
@@ -126,6 +129,9 @@ li {
 .movie-card:hover {
   background-color: #0066ff;
   color: #fff;
+}
+
+.movie-card img:hover {
   cursor: pointer;
 }
 
