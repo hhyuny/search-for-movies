@@ -5,23 +5,21 @@ function createMovieCard(movie) {
   const card = document.createElement("div");
   card.classList.add("movie-card");
   card.id = movie.id;
-  card.innerHTML = `  
-    <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="movie image">
-    
-    <h1>${movie.title}</h1>  
-    
-      
-    
+  card.innerHTML = `
+  <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="movie image" />
 
-    <div class="desc">      
-      <button class="desc-button" id="desc-button">Detail</button>
-      <div class="desc-content" id="desc-content">
-        <button class="close-button">&times;</button>
-        <p>${movie.overview}</p>
-      </div>
+<h1>${movie.title}</h1>
+
+<div class="card-bottom">
+  <div class="desc">
+    <button class="desc-button" id="desc-button">Detail</button>
+    <div class="desc-content" id="desc-content">
+      <button class="close-button">&times;</button>
+      <p>${movie.overview}</p>
     </div>
-    <strong><i class="ic-star"></i> ${movie.vote_average}</strong>
-    
+  </div>
+  <strong><i class="ic-star"></i> ${movie.vote_average}</strong>
+</div>
   `;
 
   const cardImg = card.querySelector("img");
