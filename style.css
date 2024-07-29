@@ -118,6 +118,7 @@ li {
 }
 
 .movie-card {
+  /* height: 650px; */
   padding: 10px;
   border-radius: 8px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
@@ -174,13 +175,56 @@ li {
 }
 
 .movie-card strong {
-  position: absolute;
+  /* position: absolute; */
+  right: 0px;
   bottom: 10px;
   padding: 0 5px;
 }
 
 .ic-star {
   color: #ffbe0b;
+}
+
+/* desc */
+.desc {
+  position: relative;
+}
+
+.desc-button {
+  background-color: rgb(223, 221, 231);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  transition: background-color 200ms ease-in-out;
+}
+
+.desc-button:hover {
+  background-color: #191a20;
+}
+
+.desc-content {
+  flex-direction: column;
+  visibility: hidden;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: -480px;
+  text-align: center;
+}
+
+.close-button {
+  /* position: absolute; */
+  /* top: 7px; */
+  /* right: 7px; */
+  color: #fff;
+  font-size: 25px;
+}
+
+.desc-content.is-active {
+  visibility: visible;
+  width: 100%;
+  /* top: 50px; */
+  /* padding-top: 20px; */
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 768px) {
