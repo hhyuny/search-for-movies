@@ -37,6 +37,7 @@
 - filter, forEach 메서드를 이용하여 검색 기능 구현
 - 영화 이미지 클릭 시 영화 id alert로 표출
 - Detail 버튼 클릭 시 영화 설명 창 생성(X 버튼 or Detail 버튼 재클릭시 닫힘)
+- 배포 링크 https://hhyuny.github.io/search-for-movies/
 
 ---
 
