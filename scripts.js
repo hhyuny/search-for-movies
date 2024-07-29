@@ -1,19 +1,45 @@
+// 검색 기능 구현에서 사용할 영화 정보가 담긴 배열
 let movieArr = [];
 
 function createMovieCard(movie) {
   const card = document.createElement("div");
-  // card.classList.add("col-sm-12", "col-md-6", "col-lg-4", "movie-card");
   card.classList.add("movie-card");
   card.id = movie.id;
   card.innerHTML = `  
     <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="movie image">
-    <h1>${movie.title}</h1>    
-    <p>${movie.overview}</p>
-    <strong><i class="ic-star"></i> ${movie.vote_average}</strong>    
+    
+    <h1>${movie.title}</h1>  
+    
+      
+    
+
+    <div class="desc">      
+      <button class="desc-button" id="desc-button">Detail</button>
+      <div class="desc-content" id="desc-content">
+        <button class="close-button">&times;</button>
+        <p>${movie.overview}</p>
+      </div>
+    </div>
+    <strong><i class="ic-star"></i> ${movie.vote_average}</strong>
+    
   `;
-  card.addEventListener("click", () => {
+
+  const cardImg = card.querySelector("img");
+  cardImg.addEventListener("click", () => {
     alert(`Movie ID: ${movie.id}`);
   });
+
+  const descButton = card.querySelector(".desc-button");
+  const descContent = card.querySelector(".desc-content");
+  const closeButton = card.querySelector(".close-button");
+  console.log(closeButton);
+  descButton.addEventListener("click", () => {
+    descContent.classList.toggle("is-active");
+  });
+  closeButton.addEventListener("click", () => {
+    descContent.classList.remove("is-active");
+  });
+
   return card;
 }
 
@@ -33,7 +59,3 @@ fetch(URL)
     movieArr = movies;
   })
   .catch((error) => console.error("Error:", error));
-
-const form = document.querySelector("#form");
-const input = document.querySelector("#input");
-const button = document.querySelector("#button");
