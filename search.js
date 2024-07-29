@@ -1,5 +1,8 @@
+const forms = document.querySelector("#forms");
+const input = document.querySelector("#input");
+
 // 검색 기능 - 검색어를 포함하는 영화로 리팩토링
-form.addEventListener("submit", (e) => {
+forms.addEventListener("submit", (e) => {
   e.preventDefault(); // 새로고침 방지
 
   // UI에 존재하는 모든 영화 카드를 저장
